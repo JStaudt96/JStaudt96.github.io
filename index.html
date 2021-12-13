@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--Head-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>Jesse Staudt</title>
+        <link rel="stylesheet" type="text/css" href="./jesse_website.css">
+    </head>
+
+    <!--Body-->
+    <body class="Background">
+
+    <!--Navbar-->
+    <div class="Navbar">
+        <a class="active" href="#Home">Home</a>
+        <a href="#About"> About</a>
+        <a href="#Github">Github</a>
+        <a href="#Contact">Contact</a>
+    </div>
+
+    <!--Breaks inserted to add space between navbar and the first heading-->
+    <br>
+    <br>
+
+    <!--Background Video-->
+    <div id="Home">
+        <video autoplay muted loop id="coding_video">
+            <source src="./pexels-mikhail-nilov-6963744.mp4" type="video/mp4">
+            <!--Display message if video fails to run-->
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <!--Video Text-->
+    <div class="Video_text">
+        <h1 class="white-text">Jesse Staudt's Portfolio</h1>
+        <strong>
+            <p class="center">
+                <q>It takes 20 years to build a reputation and few minutes of cyber-incident to ruin it.”
+                </q>
+                <br>-Stephanie Nappo
+                <br>
+                <br> My name is Jesse Staudt. Welcome to my portfolio website. On it, I will tell you about my background and experience.
+                <br>
+                <br> Thank you for viewing and enjoy!
+            </p>
+        </strong>
+    </div>
+
+    <!--About-->
+    <div class="Row" id="About">
+        <!--Left column-->
+        <div class="Column_2">
+            <img src="./jesse.jpg" alt="Jesse">
+        </div>
+        <!--Right Column-->
+        <div class="Column_1">
+            <h1>About</h1>
+            <p>
+                I am currently a student at The Tech Academy studying Cyber Security. I am a father of two, with another on the way. I enjoy spending time with my family and our 2 dogs.
+                I also have a bachelor's degree in Sport's Management from Mount Vernon Nazarene University.
+                <br>
+                <br>I would love to work with you in the future on your project. <a href="#Contact">Contact</a> me below!
+            </p>
+        </div>
+    </div>
+
+    <!--GitHub section-->
+    <div class="Row" id="Github">
+        <!--Left Column-->
+        <div class="Column_1">
+            <h1>GitHub</h1>
+            <p>
+                You can view my coding projects on my GitHub profile here:
+                <br>
+                <p class="center"><a href="https://github.com/JStaudt96" target="_blank">My GitHub</a></p>
+            </p>
+        </div>
+        <!--Right Column-->
+        <div class="Column_2">
+            <a href="https://github.com/JStaudt96" target="_blank"><img src="github.jpg" alt="GitHub Logo"></a>
+        </div>
+    </div>
+
+    <!--Contact section-->
+    <div class="Row" id="Contact">
+        <!--Contact image, left column-->
+        <div class="Column_2 Column_tall">
+            <img src="./contact.jpg" alt="Contact_Image">
+        </div>
+    
+    <!--Contact form, right column-->
+    <div class="Column_1 Column_tall">
+        <h1>Contact</h1>
+        <!--This specifies where and how to send the form data-->
+        <form action="" method="POST">
+            <label>Name:</label>
+                <input type="text" placeholder="Please enter your name here">
+            <label>Email:</label>
+                <input type="text" placeholder="Please enter your email here">
+            <label>Message:</label>
+                <input type="text" placeholder="Please write your message here">
+                <input type="submit" value="SUBMIT">
+        </form>
+    </div>
+    </div>
+    <!--Footer section-->
+    <footer>
+        <p>
+            <p class="center"> Jesse Staudt</p>
+        </p>
+    </footer>
+    </body>
+</html>
