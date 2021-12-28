@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width" />
         <title>Jesse Staudt</title>
+        <link rel="shortcut icon" type="img/jpg" href="coding1.jpg">
         <link rel="stylesheet" type="text/css" href="./jesse_website.css">
     </head>
 
@@ -33,10 +34,10 @@
     </div>
 
     <!--Video Text-->
-    <div class="Video_text">
+    <div class="Video_Text">
         <h1 class="white-text">Jesse Staudt's Portfolio</h1>
         <strong>
-            <p class="center">
+            <p class="center quote">
                 <q>It takes 20 years to build a reputation and few minutes of cyber-incident to ruin it.”
                 </q>
                 <br>-Stephanie Nappo
@@ -48,18 +49,77 @@
         </strong>
     </div>
 
+    <!--Slideshow section added-->
+    <div id = "Slideshow">
+        <div id="Slideshow_Background">
+            <div id ="Slideshow_Container">
+                <!--Slide 1 of 6-->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images"
+                    src="./jesse.jpg" alt="Picture of Jesse">
+                    <div class="text"I'm available to assist you on your project!></div>
+                 </div>
+                <!--Slide 2 of 6-->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images"
+                    src="./htmlcssjs-overview.png" alt="HTML, CSS and JS Logos">
+                    <div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript,</div>
+                 </div> 
+                   <!--Slide 3 of 6-->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images"
+                    src="./Python-Symbol.png" alt="Python Logo">
+                    <div class="text">the popular programming language Python,</div>
+                 </div>     
+                <!--Slide 4 of 6-->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images"
+                    src="./png-transparent-c-logo-c-programming-lC_Sharp.png" alt="C# Logo">
+                    <div class="text">C#, .NET Framework, ASP.NET, MVC,</div>
+                 </div>
+                <!--Slide 5 of 6-->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images"
+                    src="./Sql_logo.png" alt="SQL Logo">
+                    <div class="text">back end development, databases and SQL.</div>
+                 </div>
+                <!--Slide 6 of 6-->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images"
+                    src="./coding.jpg" alt="Coding">
+                    <div class="text"><a class= "white-text contact" onclick="openForm()">Contact me now!</a></div>
+                </div>
+                <!--Previous and next buttons-->
+                <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br> <!--Adds a space between the slideshow images and the dots-->
+
+            <!--Slideshow dots (these are another way for users to navigate through the slideshow)-->
+            <div style="text-align: center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+            </div>
+        </div>
+    </div>
+
     <!--About-->
     <div class="Row" id="About">
         <!--Left column-->
         <div class="Column_2">
-            <img src="./jesse.jpg" alt="Jesse">
+            <img src="./typing.jpeg" alt="Jesse">
         </div>
         <!--Right Column-->
         <div class="Column_1">
             <h1>About</h1>
             <p>
                 I am currently a student at The Tech Academy studying Cyber Security. I am a father of two, with another on the way. I enjoy spending time with my family and our 2 dogs.
-                I also have a bachelor's degree in Sport's Management from Mount Vernon Nazarene University.
+                <br>
+                <br>I also have a bachelor's degree in Sport's Management from Mount Vernon Nazarene University.
                 <br>
                 <br>I would love to work with you in the future on your project. <a href="#Contact">Contact</a> me below!
             </p>
@@ -83,27 +143,25 @@
         </div>
     </div>
 
-    <!--Contact section-->
-    <div class="Row" id="Contact">
-        <!--Contact image, left column-->
-        <div class="Column_2 Column_tall">
-            <img src="./contact.jpg" alt="Contact_Image">
+    <!--Contact form-->
+    <div id="Contact">
+        <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+        <div class="form-popup" id="myForm" ondblclick="closeForm()">
+            <form action="https://formspree.io/f/meqnqlvl" method="POST" class="form-container">
+                <h1>Contact</h1>
+                    <label for="name"><b>Name</b></label>
+                      <input type="text" placeholder="Type your name here" name="name" required>
+                    <label for="phone"><b>Phone</b></label>
+                      <input type="text" placeholder="Type your phone number here" name="phone">
+                    <label for="email"><b>Email</b></label>		
+                      <input type="text" placeholder="Type your email address here" name="email" required>
+                    <label for="message"><b>Message</b></label>
+                      <input type="text" placeholder="Type your message here" name="message">
+         
+                    <button type="submit" class="btn">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+            </form>
         </div>
-    
-    <!--Contact form, right column-->
-    <div class="Column_1 Column_tall">
-        <h1>Contact</h1>
-        <!--This specifies where and how to send the form data-->
-        <form action="https://formspree.io/f/meqnqlvl" method="POST">
-            <label>Name:</label>
-                <input type="text" name="name" placeholder="Please enter your name here" required>
-            <label>Email:</label>
-                <input type="text" name="_replyto" placeholder="Please enter your email here" required>
-            <label>Message:</label>
-                <input type="text" name="message" placeholder="Please write your message here" required>
-                <input type="submit" value="SUBMIT">
-        </form>
-    </div>
     </div>
     <!--Footer section-->
     <footer>
@@ -111,5 +169,6 @@
             <p class="center"> Jesse Staudt</p>
         </p>
     </footer>
+    <script src="./portfolio.js"></script>
     </body>
 </html>
